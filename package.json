@@ -4,7 +4,7 @@
   "description": "openclassrooms project 3",
   "main": "index.html",
   "scripts": {
-    "sass" : "sass --watch ./Edercorentin_3_29032021/sass/index.scss:./public/css/style.css"
+    "sass" : "sass --watch ./sass/index.scss:./public/css/style.css"
   },
   "author": "",
   "license": "ISC"

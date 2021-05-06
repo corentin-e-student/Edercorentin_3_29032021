@@ -1,6 +1,8 @@
-$bg-color : red;
+$bg-color : yellow;
 
 body {
+    height: 400px;
+    width: 400px;
     background-color: $bg-color;
     .logooh {
         width: 600px;
