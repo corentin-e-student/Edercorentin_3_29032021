@@ -22,7 +22,7 @@ body {
     font-size: 22px;
     font-weight: 700;
 }
-.header {
+.band-header {
     display: flex;
     border-bottom: 2px solid #cccccc;
     align-items: center;
@@ -189,6 +189,17 @@ body {
                 height: 80%;
             } */
         }
+        @keyframes pulse {
+            0% {
+              transform: scale(0);
+            }
+            75% {
+              transform: scale(1.75);
+            }
+            100% {
+              transform: scale(1.5);
+            }
+        }
         .infos-card {
             display: flex;
             flex-direction: row;
@@ -208,10 +219,20 @@ body {
                     position: absolute;
                     opacity: 0%;
                     color: white;
+                    transform: scale(1.5);
                 }
                 .icon-save-disabled:hover {
                     opacity: 100%;
-                    color: #9356DC;
+                    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transform: scale(1.5);
+                    animation: pulse 1s; 
+                }
+                .icon-save-disabled:active {
+                    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
            

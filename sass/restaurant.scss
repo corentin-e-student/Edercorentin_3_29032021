@@ -1,0 +1,7 @@
+body {
+    @include band-header();
+    @include header-logo();
+    @include footer_logo();
+    @include footer_part();
+    @include Footer_text();
+}

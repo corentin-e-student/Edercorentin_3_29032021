@@ -4,7 +4,8 @@
   "description": "openclassrooms project 3",
   "main": "index.html",
   "scripts": {
-    "sass" : "sass --watch ./sass/index.scss:./public/css/style.css"
+    "sass" : "sass --watch ./sass/index.scss:./public/css/style.css",
+    "sass" : "sass --watch ./sass/restaurant.scss:./public/css/restaurant.css"
   },
   "author": "",
   "license": "ISC"
