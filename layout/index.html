@@ -3,14 +3,14 @@
 <head>
   <title>Ohmyfood</title>
   <link rel="stylesheet" href="../public/css/style.css">
-  <link rel="stylesheet" href="../layout/restaurant.html">
+  <link rel="stylesheet" href="../layout/la-palette-du-goût.html">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <script src="https://kit.fontawesome.com/54c891831f.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div class="band-header">
+  <div class="header header__position-items">
     <img class="header-logo" src="../medias/images/logo/ohmyfood.png" alt="Ohmyfood">
   </div>
   <div class="search_bar">
@@ -19,39 +19,39 @@
   </div>
   <div class="discover">
     <div>
-      <p class="text_bold">Réservez le menu qui<br>vous convient</p>
-      <p class="small_text_light">Découvrez des restaurants d'exception<br>sélectionnés par nos soins.</p>
+      <p class="text-bold">Réservez le menu qui<br>vous convient</p>
+      <p class="small-text-light">Découvrez des restaurants d'exception<br>sélectionnés par nos soins.</p>
       <button class="discover-button">Explorer nos restaurants</button>
     </div>
   </div>
   <div class="guide">
-    <div class="guide-items_position">
-      <p class="title_bold_black">Fonctionnement</p>
-      <div class="guide-step guide-step_one">
-        <span class="bubble_step">1</span>
-        <button class="card_step"><i class="fas fa-mobile-alt icon_step"></i>Choisissez un restaurant</button>
+    <div class="guide-items">
+      <p class="title-bold-black">Fonctionnement</p>
+      <div class="guide-step guide-step-one">
+        <span class="bubble-step">1</span>
+        <button class="card-step"><i class="fas fa-mobile-alt icon_step"></i>Choisissez un restaurant</button>
       </div>
-      <div class="guide-step guide-step_two">
-        <span class="bubble_step">2</span>
-        <button class="card_step"><i class="fas fa-bars icon_step"></i>Composez votre menu</button>
+      <div class="guide-step guide-step-two">
+        <span class="bubble-step">2</span>
+        <button class="card-step"><i class="fas fa-bars icon_step"></i>Composez votre menu</button>
       </div>
-      <div class="guide-step guide-step_three">
-        <span class="bubble_step">3</span>
-        <button class="card_step"><i class="fas fa-store icon_step"></i>Dégustez au restaurant</button>
+      <div class="guide-step guide-step-three">
+        <span class="bubble-step">3</span>
+        <button class="card-step"><i class="fas fa-store icon_step"></i>Dégustez au restaurant</button>
       </div>
     </div> 
   </div>
   <div class="restaurant">
     <div class="restaurant-items_restaurants">
-      <p class="title_bold_black">Restaurants</p>
-      <a href="../layout/restaurant.html" class="restaurant-card card-restaurant-one">
+      <p class="title-bold-black">Restaurants</p>
+      <a href="../layout/la-palette-du-goût.html" class="restaurant-card card-restaurant-one">
         <img class="img-restaurant" src="..\medias\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Auberge la Cannebière">
         <div class="infos-card">
           <div class="card-notation">
             <h1 class="card-title">La palette du goût</h1>
             <p class="card-notation">Ménilmontant</p>
           </div>
-          <div class="card-icons_save">
+          <div class="card-icons-save">
             <i class="far fa-heart icon-save-active"></i>
             <i class="fas fa-heart icon-save-disabled"></i>
           </div>
@@ -64,7 +64,7 @@
             <h1 class="card-title">La note enchantée</h1>
             <p class="card-notation">Charonne</p>
           </div>
-          <div class="card-icons_save">
+          <div class="card-icons-save">
             <i class="far fa-heart icon-save-active"></i>
             <i class="fas fa-heart icon-save-disabled"></i>
           </div>
@@ -77,7 +77,7 @@
             <h1 class="card-title">À la française</h1>
             <p class="card-notation">Cité Rouge</p>
           </div>
-          <div class="card-icons_save">
+          <div class="card-icons-save">
             <i class="far fa-heart icon-save-active"></i>
             <i class="fas fa-heart icon-save-disabled"></i>
           </div>
@@ -90,7 +90,7 @@
             <h1 class="card-title">Le délice des sens</h1>
             <p class="card-notation">Folie-Méricourt</p>
           </div>
-          <div class="card-icons_save">
+          <div class="card-icons-save">
             <i class="far fa-heart icon-save-active"></i>
             <i class="fas fa-heart icon-save-disabled"></i>
           </div>
@@ -106,6 +106,30 @@
       <p class="footer_text">Mentions légales</p>
       <p class="footer_text">Contact</p>
     </div>
+  </div>
+  <div class="loader">
+    <div class="loader__active">
+      <div class="loader__font-style">
+        <p class="letter-first">O</p>
+        <p>o</p>
+        <p>o</p>
+        <p>o</p>
+        <p>o</p>
+        <p>h</p>
+        <p>h</p>
+      </div>
+    </div>
+    <!-- <div class="loader__disable">
+      <div class="loader__font-style">
+        <p>M</p>
+        <p>y</p>
+        <p>F</p>
+        <p>o</p>
+        <p>o</p>
+        <p>d</p>
+        <p>!</p>
+      </div>
+    </div> -->
   </div>
 </body>
 </html>

@@ -1,7 +1,169 @@
-body {
-    @include band-header();
-    @include header-logo();
-    @include footer_logo();
-    @include footer_part();
-    @include Footer_text();
+@import "global";
+
+.header-restaurant__position-items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .positions-return-icon {
+        display: flex;
+        flex-grow: 0.4;
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    .return-icon {
+        font-size: 20px;
+    }
 }
+.bloc-image {
+    height: 200px;
+    .restaurant-image {
+        width: 100%;
+        margin: 0;
+    }
+}
+.card-menu {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #f2f2f2;
+    .menu__title-restaurant {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 25px;
+        margin-right: 25px;
+        margin-left: 25px;
+        .style-title-restaurant {
+            display: flex;
+            flex-grow: 1;
+            font-family: Shrikhand;
+            font-size: 25px;
+            margin: 0;
+        }
+        @include icon-save;  
+    } 
+    .flat-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        .title-part {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            text-decoration: underline turquoise 2px;
+            text-underline-offset: 10px;
+            line-height: 35px;
+        }
+        .flat-card {
+            display: flex;
+            overflow: hidden;
+            flex-direction: row;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            align-items: center;
+            justify-content: start;
+            background-color: white;
+            box-shadow: 0px 3px 6px 2px #d6d6d6;
+            border: none;
+            border-radius: 15px;
+            margin-top: 15px;
+            padding: 0;
+            width: 100%;
+            height: 70px;
+            cursor: pointer;
+            .flat {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                line-height: 0.7;
+                margin-top: 15px;
+                margin-right: 15px;
+                margin-left: 5px;
+                width: 100%;
+                .title-flat-bold {
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin: 0;
+                }
+                .flat-specifications {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    .text-flat {
+                        display: flex;
+                        flex-grow: 1;
+                        font-size: 15px;
+                    }
+                    .flat-price {
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                    
+                }
+                
+            }
+            .validateur {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 0%;
+                height: 100%;
+                background-color: #99E2D0;
+                margin: 0;
+                .icon-validateur {
+                    font-size: 25px;
+                    color: white
+                }
+            }
+            &:hover {
+                @keyframes validateur {
+                    from {
+                        width: 0%;
+                    }
+                    to {
+                        width: 30%;
+                    }
+                    
+                }
+                .validateur {
+                    animation-name: validateur;
+                    animation-duration: 2s;
+                }
+            }
+                
+        }
+    }
+    .position-order-button {
+        display: flex;
+        justify-content: center;
+
+        .order-button {
+            font-size: 15px;
+            color: white;
+            background: linear-gradient(to bottom right, #FF79DA 10%, #9356DC 80%);
+            box-shadow: 0px 3px 3px 3px #cccccc;
+            height: 45px;
+            width: 220px;
+            margin-top: 20px;
+            border-radius: 25px;
+            border: none;
+            &:hover {
+                transition-duration: 1s;
+                font-size: 20px;
+                border-radius: 50px;
+                height: 60px;
+                width: 280px;
+                cursor: pointer;
+            }
+        }
+        }
+        
+
+    
+}
+    
+    

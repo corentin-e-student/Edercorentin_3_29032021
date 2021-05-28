@@ -1,3 +1,5 @@
+@import "restaurant";
+@import "global";
 
 body {
     display: flex;
@@ -5,28 +7,12 @@ body {
     align-items: center;
     margin: 0;
 }
-.text_bold {
-    font-size: 25px;
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 10px;
-    line-height: 26px
-}
-.small_text_light {
-    font-size: 17px;
-    margin: 0;
-    margin-bottom: 10px;
-}
-.title_bold_black {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-}
-.band-header {
+
+@include style-font;
+
+.header {
     display: flex;
     border-bottom: 2px solid #cccccc;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 60px;
     .header-logo {
@@ -34,6 +20,11 @@ body {
         height: 30px;
         margin: 0px;
     }
+}
+.header__position-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .search_bar {
     display: flex;
@@ -90,7 +81,7 @@ body {
 
 .guide {
     width: 100%;
-    .guide-items_position {
+    .guide-items {
         margin-right: 20px;
         margin-left: 20px;
         .guide-step {
@@ -98,7 +89,7 @@ body {
             flex-direction: row;
             align-items: center;
             padding-bottom: 20px;
-            .bubble_step {
+            .bubble-step {
                 font-family: 'Roboto', sans-serif;
                 font-size: 11px;
                 position: absolute;
@@ -110,7 +101,7 @@ body {
                 padding-right: 7px;
                 padding-left: 7px;
             }
-            .card_step {
+            .card-step {
                 display: flex;
                 font-family: 'Roboto', sans-serif;
                 font-size: 15px;
@@ -130,15 +121,15 @@ body {
                 }
             }
         }
-        .guide-step_one {
+        .guide-step-one {
             animation-duration: 1s;
             animation-name: surf;
         }
-        .guide-step_two {
+        .guide-step-two {
             animation-duration: 2s;
             animation-name: surf;
         }
-        .guide-step_three {
+        .guide-step-three {
             animation-duration: 3s;
             animation-name: surf;
         }
@@ -148,7 +139,6 @@ body {
                 transform: translateY(-10px);
             }
             to {
-            
                 opacity: 100%;
             }
         }
@@ -184,58 +174,16 @@ body {
         }
         .restaurant-card:hover {
             box-shadow: 10px 10px 10px grey, -10px 0px 10px  grey ;
-            /* height: 340px; */
-            /* .img-restaurant {
-                height: 80%;
-            } */
+            transform: scale(1.005);
         }
-        @keyframes pulse {
-            0% {
-              transform: scale(0);
-            }
-            75% {
-              transform: scale(1.75);
-            }
-            100% {
-              transform: scale(1.5);
-            }
-        }
+        
         .infos-card {
             display: flex;
             flex-direction: row;
             align-items: center;
             margin: 15px;
-            .card-icons_save {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                .icon-save-active {
-                    display: flex;
-                    font-size: 22px;
-                }
-                .icon-save-disabled {
-                    display: flex;
-                    font-size: 22px;
-                    position: absolute;
-                    opacity: 0%;
-                    color: white;
-                    transform: scale(1.5);
-                }
-                .icon-save-disabled:hover {
-                    opacity: 100%;
-                    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    transform: scale(1.5);
-                    animation: pulse 1s; 
-                }
-                .icon-save-disabled:active {
-                    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-           
+
+            @include icon-save;
 
             .card-notation {
                 display: flex;
@@ -276,7 +224,6 @@ body {
                 transform: translateY(30px);
             }
             to {
-            
                 opacity: 100%;
             }
         }
