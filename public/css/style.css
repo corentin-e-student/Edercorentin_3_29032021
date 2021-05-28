@@ -58,7 +58,7 @@
   overflow: hidden;
   opacity: 100%;
   animation: loader-page 2s forwards;
-  animation-delay: 3.4s;
+  animation-delay: 3s;
   /* .loader__disable {
       animation-name: loader-active;
       animation-duration: 1s;
@@ -118,8 +118,8 @@
   height: 100%;
   color: linear-gradient(to bottom right, #FF79DA 10%, #9356DC 80%);
   font-family: Shrikhand;
-  font-size: 100px;
-  letter-spacing: 40px;
+  font-size: 35px;
+  letter-spacing: 20px;
 }
 .loader .loader__active .loader__font-style p:nth-child(1) {
   transform: scale(1);
@@ -245,8 +245,8 @@
 .card-menu .flat-group .title-part {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
-  text-decoration: underline turquoise 2px;
-  text-underline-offset: 10px;
+  border-bottom: 2px solid #99E2D0;
+  width: 25px;
   line-height: 35px;
 }
 .card-menu .flat-group .flat-card {
@@ -405,7 +405,7 @@
   overflow: hidden;
   opacity: 100%;
   animation: loader-page 2s forwards;
-  animation-delay: 3.4s;
+  animation-delay: 3s;
   /* .loader__disable {
       animation-name: loader-active;
       animation-duration: 1s;
@@ -465,8 +465,8 @@
   height: 100%;
   color: linear-gradient(to bottom right, #FF79DA 10%, #9356DC 80%);
   font-family: Shrikhand;
-  font-size: 100px;
-  letter-spacing: 40px;
+  font-size: 35px;
+  letter-spacing: 20px;
 }
 .loader .loader__active .loader__font-style p:nth-child(1) {
   transform: scale(1);

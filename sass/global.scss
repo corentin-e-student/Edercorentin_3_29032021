@@ -112,10 +112,10 @@
     overflow: hidden;
     opacity: 100%;
     animation: loader-page 2s forwards;
-    animation-delay: 3.4s;
+    animation-delay: 3s;
     .loader__active {
         animation-name: loader-disable;
-        animation-delay: 3.20s;
+        animation-delay: 3.2s;
         animation-duration: 1s;
         opacity: 100%;
         .loader__font-style {
@@ -128,8 +128,8 @@
             height: 100%;
             color: linear-gradient(to bottom right, #FF79DA 10%, #9356DC 80%);
             font-family: Shrikhand;
-            font-size: 100px;
-            letter-spacing: 40px;
+            font-size: 35px;
+            letter-spacing: 20px;
             p:nth-child(1) {
                 transform: scale(1);
                 animation-name: loader;
