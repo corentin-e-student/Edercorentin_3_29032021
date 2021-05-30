@@ -21,6 +21,12 @@
         width: 100%;
         margin: 0;
     }
+    .restaurant-image-two {
+        width: 100%;
+        margin: 0;
+        object-fit: cover;
+        object-position: 0px -120px;
+    }
 }
 .card-menu {
     display: flex;
@@ -89,6 +95,12 @@
                     font-weight: 700;
                     margin: 0;
                     margin-bottom: 5px;
+                    .text-ellipsis {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 80%;
+                    }
                 }
                 .flat-specifications {
                     display: flex;
@@ -200,10 +212,14 @@
                 box-shadow: 0px 1px 1px 10px #99E2D0;
             }
         }
-        }
-        
-
-    
+    }    
 }
-    
+
+@media only screen and (min-width: 600px) {
+    .header-restaurant__position-items {
+        .positions-return-icon {
+             flex-grow: 0.5;
+        }
+    }
+}
     
