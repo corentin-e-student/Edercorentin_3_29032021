@@ -52,6 +52,7 @@
         }
         @include icon-save;  
     } 
+    
     .flat-group {
         display: flex;
         flex-direction: column;
@@ -64,112 +65,121 @@
             width: 25px;
             line-height: 35px;
         }
-        .flat-card {
-            display: flex;
-            overflow: hidden;
-            flex-direction: row;
-            font-family: 'Roboto', sans-serif;
-            font-size: 15px;
-            align-items: center;
-            justify-content: start;
-            background-color: white;
-            box-shadow: 0px 3px 6px 2px #d6d6d6;
-            border: none;
-            border-radius: 15px;
-            margin-top: 15px;
-            padding: 0;
-            width: 100%;
-            height: 70px;
-            cursor: pointer;
-            .flat {
+        .flat-card-position {
+            .flat-card {
                 display: flex;
-                flex-direction: column;
-                text-align: start;
-                margin-top: 10px;
-                margin-right: 10px;
-                margin-left: 10px;
-                margin-bottom: 10px;
+                overflow: hidden;
+                flex-direction: row;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                align-items: center;
+                justify-content: start;
+                background-color: white;
+                box-shadow: 0px 3px 6px 2px #d6d6d6;
+                border: none;
+                border-radius: 15px;
+                margin-top: 15px;
+                padding: 0;
                 width: 100%;
-                .title-flat-bold {
-                    font-size: 18px;
-                    font-weight: 700;
-                    margin: 0;
-                    margin-bottom: 5px;
-                    .text-ellipsis {
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        width: 80%;
-                    }
+                height: 70px;
+                cursor: pointer;
+                .flat-image {
+                    display: none;
                 }
-                .flat-specifications {
+                .flat-items-position {
                     display: flex;
-                    flex-direction: row;
                     width: 100%;
-                    margin: 0;
-                    .text-flat {
+                    height: 100%;
+                    .flat {
                         display: flex;
-                        font-size: 14px;
-                        flex-grow: 1;
-                        overflow: hidden;
-                        .text-ellipsis {
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            width: 80%;
+                        flex-direction: column;
+                        text-align: start;
+                        margin-top: 10px;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        justify-content: center;
+                        .title-flat-bold {
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin: 0;
+                            margin-bottom: 5px;
+                            .text-ellipsis {
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                width: 80%;
+                            }
+                        }
+                        .flat-specifications {
+                            display: flex;
+                            flex-direction: row;
+                            width: 100%;
+                            margin: 0;
+                            .text-flat {
+                                display: flex;
+                                font-size: 14px;
+                                flex-grow: 1;
+                                overflow: hidden;
+                                .text-ellipsis {
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    width: 80%;
+                                }
+                            }
+                            .flat-price {
+                                font-weight: 600;
+                                font-size: 15px;
+                            }
+                            
+                        }
+                        
+                    }
+                    .validateur {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 0%;
+                        background-color: #99E2D0;
+                        margin: 0;
+                        .icon-validateur {
+                            font-size: 25px;
+                            color: white;
+                        }
+                        
+                    }
+                    &:hover {
+                        
+                        @keyframes validateur {
+                            from {
+                                width: 0%;
+                            }
+                            to {
+                                width: 30%;
+                            }
+                        }
+                        .validateur {
+                            animation-name: validateur;
+                            animation-duration: 2s;
+                            width: 30%;
+                        }
+                        @keyframes icon-rotation {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        .icon-validateur {
+                            animation-name: icon-rotation;
+                            animation-duration: 2s;
                         }
                     }
-                    .flat-price {
-                        font-weight: 600;
-                        font-size: 15px;
-                    }
-                    
                 }
-                
-            }
-            .validateur {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 0%;
-                height: 100%;
-                background-color: #99E2D0;
-                margin: 0;
-                .icon-validateur {
-                    font-size: 25px;
-                    color: white;
-                }
-                
-            }
-            &:hover {
-                
-                @keyframes validateur {
-                    from {
-                        width: 0%;
-                    }
-                    to {
-                        width: 30%;
-                    }
-                }
-                .validateur {
-                    animation-name: validateur;
-                    animation-duration: 2s;
-                    width: 30%;
-                }
-                @keyframes icon-rotation {
-                    from {
-                        transform: rotate(0deg);
-                    }
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-                .icon-validateur {
-                    animation-name: icon-rotation;
-                    animation-duration: 2s;
-                }
-            }
-                
+            }   
         }
         .flat-card-one {
             animation-duration: 1s;
@@ -188,6 +198,7 @@
             animation-name: surf;
         }
     }
+    
     .position-order-button {
         display: flex;
         justify-content: center;
@@ -215,10 +226,105 @@
     }    
 }
 
+
+
 @media only screen and (min-width: 600px) {
     .header-restaurant__position-items {
         .positions-return-icon {
+             flex-grow: 0.4;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    .header-restaurant__position-items {
+        .positions-return-icon {
              flex-grow: 0.5;
+        }
+    }
+    
+    .card-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 40px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        background-color: #f2f2f2;
+        .menu__title-restaurant {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 25px;
+            margin-right: 25px;
+            margin-left: 25px;
+            .style-title-restaurant {
+                display: flex;
+                flex-grow: 1;
+                font-family: Shrikhand;
+                font-size: 25px;
+                margin: 0;
+            }
+            @include icon-save;  
+        } 
+        .flat-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .title-part {
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                border-bottom: 2px solid #99E2D0;
+                width: 50%;
+                line-height: 70px;
+                text-align: center;
+            }
+            .flat-card-position {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-around;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                .flat-card {
+                    display: flex;
+                    overflow: hidden;
+                    flex-direction: column;
+                    width: 20%;
+                    height: 380px;
+                    .flat-image {
+                        display: block;
+                        width: 500px;
+                        height: 300px;
+                    }
+                    .flat-items-position {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        .flat {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: start;
+                            margin-top: 15px;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            margin-bottom: 10px;
+                            width: 100%;
+                            .flat-specifications {
+                                display: flex;
+                                flex-direction: row;
+                                width: 100%;
+                                height: 35px;
+                                margin: 0;
+                                
+                            }
+                            
+                        }
+                    }
+                }   
+            }
         }
     }
 }

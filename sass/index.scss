@@ -82,145 +82,149 @@ body {
 
 .guide {
     width: 100%;
-    .guide-items {
+    .guide-position-items {
         margin-right: 20px;
         margin-left: 20px;
-        .guide-step {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding-bottom: 20px;
-            .bubble-step {
-                font-family: 'Roboto', sans-serif;
-                font-size: 11px;
-                position: absolute;
-                background-color: #9356DC;
-                color: white;
-                border-radius: 50%;
-                padding-top: 5px;
-                padding-bottom: 2px;
-                padding-right: 7px;
-                padding-left: 7px;
-            }
-            .card-step {
+        .guide-items-step {
+            .guide-step {
                 display: flex;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15px;
+                flex-direction: row;
                 align-items: center;
-                justify-content: start;
-                background-color: #f2f2f2;
-                box-shadow: 0px 3px 6px 2px #d6d6d6;
-                border: none;
-                border-radius: 20px;
-                width: 100%;
-                height: 70px;
-                margin-left: 10px;
-                .icon_step {
-                    font-size: 18px;
-                    margin-left: 30px;
-                    margin-right: 30px;
+                padding-bottom: 20px;
+                .bubble-step {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 11px;
+                    position: absolute;
+                    background-color: #9356DC;
+                    color: white;
+                    border-radius: 50%;
+                    padding-top: 5px;
+                    padding-bottom: 2px;
+                    padding-right: 7px;
+                    padding-left: 7px;
+                }
+                .card-step {
+                    display: flex;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 15px;
+                    align-items: center;
+                    justify-content: start;
+                    background-color: #f2f2f2;
+                    box-shadow: 0px 3px 6px 2px #d6d6d6;
+                    border: none;
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 70px;
+                    margin-left: 10px;
+                    .icon_step {
+                        font-size: 18px;
+                        margin-left: 30px;
+                        margin-right: 30px;
+                    }
                 }
             }
+            .guide-step-one {
+                animation-duration: 1s;
+                animation-name: surf;
+            }
+            .guide-step-two {
+                animation-duration: 2s;
+                animation-name: surf;
+            }
+            .guide-step-three {
+                animation-duration: 3s;
+                animation-name: surf;
+            }
+            
         }
-        .guide-step-one {
-            animation-duration: 1s;
-            animation-name: surf;
-        }
-        .guide-step-two {
-            animation-duration: 2s;
-            animation-name: surf;
-        }
-        .guide-step-three {
-            animation-duration: 3s;
-            animation-name: surf;
-        }
-        
     }
 }
 
 .restaurant {
     width: 100%;
-    .restaurant-items_restaurants {
-        margin-right: 20px;
-        margin-left: 20px;
-        .restaurant-card {
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            color: black;
-            box-shadow: 5px 5px 5px rgba(204, 204, 204, 0.5), -5px 0px 5px  rgba(204, 204, 204, 0.5) ;
-            margin: 0px 0px 20px 0px;
-            transition: 0.3s;
-            height: 240px;
-            width: 100%;
-            border-radius: 20px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .img-restaurant {
-            display: flex;
-            object-fit: cover;
-            height: 70%;
-            width: 100%;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px; 
-        }
-        .restaurant-card:hover {
-            box-shadow: 10px 10px 10px grey, -10px 0px 10px  grey ;
-            transform: scale(1.005);
-        }
-        
-        .infos-card {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 15px;
-
-            @include icon-save;
-
-            .card-notation {
+    .restaurant-items-position {
+        .restaurant-items {
+            margin-right: 20px;
+            margin-left: 20px;
+            .restaurant-card {
                 display: flex;
                 flex-direction: column;
-                line-height: 23px;
-                flex-grow: 1;
-                .card-title {
-                    font-size: 18px;
-                    font-family: 'Roboto', sans-serif;
-                    margin: 0;
-                }
+                background-color: white;
+                color: black;
+                box-shadow: 5px 5px 5px rgba(204, 204, 204, 0.5), -5px 0px 5px  rgba(204, 204, 204, 0.5) ;
+                margin: 0px 0px 20px 0px;
+                transition: 0.3s;
+                height: 240px;
+                width: 100%;
+                border-radius: 20px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .img-restaurant {
+                display: flex;
+                object-fit: cover;
+                height: 70%;
+                width: 100%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px; 
+            }
+            .restaurant-card:hover {
+                box-shadow: 10px 10px 10px grey, -10px 0px 10px  grey ;
+                transform: scale(1.005);
+            }
+            
+            .infos-card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 15px;
+
+                @include icon-save;
+
                 .card-notation {
-                    font-size: 15px;
-                    font-family: 'Roboto', sans-serif;
-                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 23px;
+                    flex-grow: 1;
+                    .card-title {
+                        font-size: 18px;
+                        font-family: 'Roboto', sans-serif;
+                        margin: 0;
+                    }
+                    .card-notation {
+                        font-size: 15px;
+                        font-family: 'Roboto', sans-serif;
+                        margin: 0;
+                    }
                 }
             }
-        }
-        .card-restaurant-one {
-            animation-duration: 1s;
-            animation-name: restaurant;
-        }
-        .card-restaurant-two {
-            animation-duration: 1.5s;
-            animation-name: restaurant;
-        }
-        .card-restaurant-three {
-            animation-duration: 2s;
-            animation-name: restaurant;
-        }
-        .card-restaurant-four {
-            animation-duration: 2.5s;
-            animation-name: restaurant;
-        }
-        @keyframes restaurant {
-            from {
-                opacity: 0%;
-                transform: translateY(30px);
+            .card-restaurant-one {
+                animation-duration: 1s;
+                animation-name: restaurant;
             }
-            to {
-                opacity: 100%;
+            .card-restaurant-two {
+                animation-duration: 1.5s;
+                animation-name: restaurant;
             }
+            .card-restaurant-three {
+                animation-duration: 2s;
+                animation-name: restaurant;
+            }
+            .card-restaurant-four {
+                animation-duration: 2.5s;
+                animation-name: restaurant;
+            }
+            @keyframes restaurant {
+                from {
+                    opacity: 0%;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 100%;
+                }
+            }
+            
         }
-        
     }
 }
 .footer_part {
@@ -314,5 +318,83 @@ body {
     
 }
 
+@media only screen and (min-width: 1024px) {
+    .guide {
+        .guide-position-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            .guide-items-step {
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                justify-content: space-between;
+                margin-top: 50px;
+                .guide-step {
+                    .bubble-step {
+                        font-size: 15px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    }
+                    .card-step {
+                        font-size: 15px;
+                        margin-left: 10px;
+                        padding-right: 15px;   
+                    }         
+                }   
+            }       
+        }
+    }  
+    .restaurant {
+        .restaurant-items-position {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            .restaurant-items {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                margin-top:50px;
+                margin-bottom:50px;
+                .restaurant-card {
+                    height: 300px;
+                    width: 22%;
+                }
+                .img-restaurant {
+                    display: flex;
+                    object-fit: cover;
+                    height: 90%;
+                    width: 100%;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px; 
+                }
+                
+                
+            }
+        }
+    }    
+}
 
+@media only screen and (min-width: 1600px) {
+    .guide {
+        .guide-position-items {
+            .guide-items-step {
+                width: 60%;
+                .guide-step {
+                    .card-step {
+                        font-size: 18px;
+                    }         
+                }   
+            }       
+        }
+    }  
+}
 
