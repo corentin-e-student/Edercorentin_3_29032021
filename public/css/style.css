@@ -66,14 +66,14 @@
   font-size: 20px;
 }
 
-.bloc-image {
+.block-image {
   height: 200px;
 }
-.bloc-image .restaurant-image {
+.block-image .restaurant-image {
   width: 100%;
   margin: 0;
 }
-.bloc-image .restaurant-image-two {
+.block-image .restaurant-image-two {
   width: 100%;
   margin: 0;
   object-fit: cover;
@@ -216,7 +216,7 @@
   font-weight: 600;
   font-size: 15px;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .validateur {
+.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .validator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,11 +224,11 @@
   background-color: #99E2D0;
   margin: 0;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .validateur .icon-validateur {
+.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .validator .icon-validator {
   font-size: 25px;
   color: white;
 }
-@keyframes validateur {
+@keyframes validator {
   from {
     width: 0%;
   }
@@ -236,8 +236,8 @@
     width: 30%;
   }
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position:hover .validateur {
-  animation-name: validateur;
+.card-menu .flat-group .flat-card-position .flat-card .flat-items-position:hover .validator {
+  animation-name: validator;
   animation-duration: 2s;
   width: 30%;
 }
@@ -249,7 +249,7 @@
     transform: rotate(360deg);
   }
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position:hover .icon-validateur {
+.card-menu .flat-group .flat-card-position .flat-card .flat-items-position:hover .icon-validator {
   animation-name: icon-rotation;
   animation-duration: 2s;
 }
@@ -386,10 +386,12 @@
     flex-direction: column;
     width: 20%;
     height: 100%;
+    transition: 0.3s;
   }
   .card-menu .flat-group .flat-card-position .flat-card .flat-image {
     display: block;
-    width: 500px;
+    object-fit: cover;
+    width: 100%;
     height: 300px;
   }
   .card-menu .flat-group .flat-card-position .flat-card .flat-items-position {
@@ -410,6 +412,35 @@
     flex-direction: row;
     width: 100%;
     margin: 0;
+  }
+  .card-menu .flat-group .flat-card-position .flat-card:hover {
+    box-shadow: 10px 10px 10px grey, -10px 0px 10px grey;
+    transform: scale(1.005);
+  }
+  @keyframes validator {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 30%;
+    }
+  }
+  .card-menu .flat-group .flat-card-position .flat-card:hover .validator {
+    animation-name: validator;
+    animation-duration: 2s;
+    width: 30%;
+  }
+  @keyframes icon-rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .card-menu .flat-group .flat-card-position .flat-card:hover .icon-validator {
+    animation-name: icon-rotation;
+    animation-duration: 2s;
   }
 }
 @keyframes pulse {

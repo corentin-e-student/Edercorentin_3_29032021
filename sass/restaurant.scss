@@ -15,7 +15,7 @@
         font-size: 20px;
     }
 }
-.bloc-image {
+.block-image {
     height: 200px;
     .restaurant-image {
         width: 100%;
@@ -134,14 +134,14 @@
                         }
                         
                     }
-                    .validateur {
+                    .validator {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         width: 0%;
                         background-color: #99E2D0;
                         margin: 0;
-                        .icon-validateur {
+                        .icon-validator {
                             font-size: 25px;
                             color: white;
                         }
@@ -149,7 +149,7 @@
                     }
                     &:hover {
                         
-                        @keyframes validateur {
+                        @keyframes validator {
                             from {
                                 width: 0%;
                             }
@@ -157,8 +157,8 @@
                                 width: 30%;
                             }
                         }
-                        .validateur {
-                            animation-name: validateur;
+                        .validator {
+                            animation-name: validator;
                             animation-duration: 2s;
                             width: 30%;
                         }
@@ -170,7 +170,7 @@
                                 transform: rotate(360deg);
                             }
                         }
-                        .icon-validateur {
+                        .icon-validator {
                             animation-name: icon-rotation;
                             animation-duration: 2s;
                         }
@@ -291,9 +291,11 @@
                     flex-direction: column;
                     width: 20%;
                     height: 100%;
+                    transition: 0.3s;
                     .flat-image {
                         display: block;
-                        width: 500px;
+                        object-fit: cover;
+                        width: 100%;
                         height: 300px;
                     }
                     .flat-items-position {
@@ -317,7 +319,38 @@
                             
                         }
                     }
-                }   
+                    &:hover {
+                        
+                        @keyframes validator {
+                            from {
+                                width: 0%;
+                            }
+                            to {
+                                width: 30%;
+                            }
+                        }
+                        .validator {
+                            animation-name: validator;
+                            animation-duration: 2s;
+                            width: 30%;
+                        }
+                        @keyframes icon-rotation {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        .icon-validator {
+                            animation-name: icon-rotation;
+                            animation-duration: 2s;
+                        }
+                        box-shadow: 10px 10px 10px grey, -10px 0px 10px  grey ;
+                        transform: scale(1.005);
+    
+                    }  
+                }
             }
         }
     }
