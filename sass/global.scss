@@ -1,17 +1,17 @@
 @mixin style-font {
-    .text-bold {
+    .text__bold {
         font-size: 25px;
         font-weight: 700;
         margin: 0;
         margin-bottom: 10px;
         line-height: 26px
     }
-    .small-text-light {
+    .small-text__light {
         font-size: 17px;
         margin: 0;
         margin-bottom: 10px;
     }
-    .title-bold-black {
+    .title-black__bold {
         font-family: 'Roboto', sans-serif;
         font-size: 22px;
         font-weight: 700;
@@ -104,7 +104,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .separator-line-style {
+    .separator-line__style {
         width: 50%;
         border-top: 2px solid #99E2D0 ;
     }

@@ -10,7 +10,7 @@
     .header__link-home {
         display: flex;
         flex-grow: 0.5;
-        margin-left: 20px;
+        padding-left: 10px;
         text-decoration: none;
         color: black;
     }
@@ -94,6 +94,7 @@
                     font-size: 18px;
                     font-weight: 700;
                     margin: 0;
+                    margin-bottom: 5px;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
