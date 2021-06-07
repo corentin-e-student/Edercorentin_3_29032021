@@ -50,37 +50,39 @@
     border-top: 2px solid #99E2D0;
   }
 }
-.header-restaurant__position-items {
+.header__restaurant {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  border-bottom: 2px solid #cccccc;
+  width: 100%;
+  height: 60px;
 }
-.header-restaurant__position-items .positions-return-icon {
+
+.header__position-items .header__link-home {
   display: flex;
-  flex-grow: 0.4;
+  flex-grow: 0.5;
   margin-left: 20px;
   text-decoration: none;
   color: black;
 }
-.header-restaurant__position-items .return-icon {
+.header__position-items .header__icon-return {
   font-size: 20px;
 }
+.header__position-items .header__logo {
+  width: 150px;
+  height: 30px;
+  margin: 0px;
+}
 
-.block-image {
+.background__image {
   height: 200px;
 }
-.block-image .restaurant-image {
-  width: 100%;
-  margin: 0;
-}
-.block-image .restaurant-image-two {
+.background__image .background__image-restaurant {
   width: 100%;
   margin: 0;
   object-fit: cover;
-  object-position: 0px -120px;
 }
 
-.card-menu {
+.menu__card {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -89,7 +91,7 @@
   border-top-right-radius: 40px;
   background-color: #f2f2f2;
 }
-.card-menu .menu__title-restaurant {
+.menu__card .menu__header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -97,24 +99,24 @@
   margin-right: 25px;
   margin-left: 25px;
 }
-.card-menu .menu__title-restaurant .style-title-restaurant {
+.menu__card .menu__header .menu__title {
   display: flex;
   flex-grow: 1;
   font-family: Shrikhand;
   font-size: 25px;
   margin: 0;
 }
-.card-menu .menu__title-restaurant .card-icons-save {
+.menu__card .menu__header .icon-save {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.card-menu .menu__title-restaurant .card-icons-save .icon-save-active {
+.menu__card .menu__header .icon-save .icon-save__active {
   display: flex;
   font-size: 22px;
 }
-.card-menu .menu__title-restaurant .card-icons-save .icon-save-disabled {
+.menu__card .menu__header .icon-save .icon-save__disabled {
   display: flex;
   font-size: 22px;
   position: absolute;
@@ -122,7 +124,7 @@
   color: white;
   transform: scale(1.5);
 }
-.card-menu .menu__title-restaurant .card-icons-save .icon-save-disabled:hover {
+.menu__card .menu__header .icon-save .icon-save__disabled:hover {
   opacity: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
@@ -130,93 +132,71 @@
   transform: scale(1.5);
   animation: pulse 1s;
 }
-.card-menu .menu__title-restaurant .card-icons-save .icon-save-disabled:active {
+.menu__card .menu__header .icon-save .icon-save__disabled:active {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card-menu .flat-group {
+.menu__card .flat-card__group {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
 }
-.card-menu .flat-group .title-part {
+.menu__card .flat-card__group .flat-card__group-title {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   border-bottom: 2px solid #99E2D0;
   width: 25px;
   line-height: 35px;
 }
-.card-menu .flat-group .flat-card-position .flat-card {
-  display: flex;
-  overflow: hidden;
-  flex-direction: row;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  align-items: center;
-  justify-content: start;
+.menu__card .flat-card__group .flat-card__style {
   background-color: white;
-  box-shadow: 0px 3px 6px 2px #d6d6d6;
-  border: none;
-  border-radius: 15px;
-  margin-top: 15px;
-  padding: 0;
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 0.75rem;
+  display: flex;
   width: 100%;
-  height: 70px;
   cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-image {
+.menu__card .flat-card__group .flat-card__style .flat-card__image {
   display: none;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position {
-  display: flex;
-  width: 100%;
+.menu__card .flat-card__group .flat-card__style .flat-card__text {
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  margin-right: 10px;
-  margin-left: 10px;
-  width: 100%;
-  justify-content: center;
-}
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .title-flat-bold {
+.menu__card .flat-card__group .flat-card__style .flat-card__text .flat-card__title {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 5px;
-}
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .title-flat-bold .text-ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 80%;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .flat-specifications {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin: 0;
-}
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .flat-specifications .text-flat {
-  display: flex;
+.menu__card .flat-card__group .flat-card__style .flat-card__text .flat-card__description {
   font-size: 14px;
-  flex-grow: 1;
-  overflow: hidden;
-}
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .flat-specifications .text-flat .text-ellipsis {
+  display: flex;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 80%;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .flat-specifications .flat-price {
-  font-weight: 600;
-  font-size: 15px;
+.menu__card .flat-card__group .flat-card__style .flat-card__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .validator {
+.menu__card .flat-card__group .flat-card__style .flat-card__validator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,7 +204,7 @@
   background-color: #99E2D0;
   margin: 0;
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position .validator .icon-validator {
+.menu__card .flat-card__group .flat-card__style .flat-card__validator .flat-card__icon-validator {
   font-size: 25px;
   color: white;
 }
@@ -236,7 +216,7 @@
     width: 30%;
   }
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position:hover .validator {
+.menu__card .flat-card__group .flat-card__style:hover .flat-card__validator {
   animation-name: validator;
   animation-duration: 2s;
   width: 30%;
@@ -249,31 +229,31 @@
     transform: rotate(360deg);
   }
 }
-.card-menu .flat-group .flat-card-position .flat-card .flat-items-position:hover .icon-validator {
+.menu__card .flat-card__group .flat-card__style:hover .flat-card__icon-validator {
   animation-name: icon-rotation;
   animation-duration: 2s;
 }
-.card-menu .flat-group .flat-card-one {
+.menu__card .flat-card__group .flat-card-one__animation {
   animation-duration: 1s;
   animation-name: surf;
 }
-.card-menu .flat-group .flat-card-two {
+.menu__card .flat-card__group .flat-card-two__animation {
   animation-duration: 2s;
   animation-name: surf;
 }
-.card-menu .flat-group .flat-card-three {
+.menu__card .flat-card__group .flat-card-three__animation {
   animation-duration: 3s;
   animation-name: surf;
 }
-.card-menu .flat-group .flat-card-four {
+.menu__card .flat-card__group .flat-card-four__animation {
   animation-duration: 4s;
   animation-name: surf;
 }
-.card-menu .position-order-button {
+.menu__card .foot-page__position-items {
   display: flex;
   justify-content: center;
 }
-.card-menu .position-order-button .order-button {
+.menu__card .foot-page__position-items .foot-page__order-button {
   font-size: 15px;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA 10%, #9356DC 80%);
@@ -284,7 +264,7 @@
   border-radius: 25px;
   border: none;
 }
-.card-menu .position-order-button .order-button:hover {
+.menu__card .foot-page__position-items .foot-page__order-button:hover {
   transition-duration: 1s;
   font-size: 20px;
   border-radius: 50px;
@@ -294,16 +274,7 @@
   box-shadow: 0px 1px 1px 10px #99E2D0;
 }
 
-@media only screen and (min-width: 600px) {
-  .header-restaurant__position-items .positions-return-icon {
-    flex-grow: 0.4;
-  }
-}
 @media only screen and (min-width: 1024px) {
-  .header-restaurant__position-items .positions-return-icon {
-    flex-grow: 0.5;
-  }
-
   .card-menu {
     display: flex;
     flex-direction: column;
@@ -328,17 +299,17 @@
     font-size: 25px;
     margin: 0;
   }
-  .card-menu .menu__title-restaurant .card-icons-save {
+  .card-menu .menu__title-restaurant .icon-save {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
-  .card-menu .menu__title-restaurant .card-icons-save .icon-save-active {
+  .card-menu .menu__title-restaurant .icon-save .icon-save__active {
     display: flex;
     font-size: 22px;
   }
-  .card-menu .menu__title-restaurant .card-icons-save .icon-save-disabled {
+  .card-menu .menu__title-restaurant .icon-save .icon-save__disabled {
     display: flex;
     font-size: 22px;
     position: absolute;
@@ -346,7 +317,7 @@
     color: white;
     transform: scale(1.5);
   }
-  .card-menu .menu__title-restaurant .card-icons-save .icon-save-disabled:hover {
+  .card-menu .menu__title-restaurant .icon-save .icon-save__disabled:hover {
     opacity: 100%;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
     -webkit-background-clip: text;
@@ -354,7 +325,7 @@
     transform: scale(1.5);
     animation: pulse 1s;
   }
-  .card-menu .menu__title-restaurant .card-icons-save .icon-save-disabled:active {
+  .card-menu .menu__title-restaurant .icon-save .icon-save__disabled:active {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -527,8 +498,9 @@ body {
   border-bottom: 2px solid #cccccc;
   width: 100%;
   height: 60px;
+  justify-content: center;
 }
-.header .header-logo {
+.header .header__logo {
   width: 150px;
   height: 30px;
   margin: 0px;
@@ -537,7 +509,6 @@ body {
 .header__position-items {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .search_bar {
@@ -690,17 +661,17 @@ body {
   align-items: center;
   margin: 15px;
 }
-.restaurant .restaurant-items-position .restaurant-items .infos-card .card-icons-save {
+.restaurant .restaurant-items-position .restaurant-items .infos-card .icon-save {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.restaurant .restaurant-items-position .restaurant-items .infos-card .card-icons-save .icon-save-active {
+.restaurant .restaurant-items-position .restaurant-items .infos-card .icon-save .icon-save__active {
   display: flex;
   font-size: 22px;
 }
-.restaurant .restaurant-items-position .restaurant-items .infos-card .card-icons-save .icon-save-disabled {
+.restaurant .restaurant-items-position .restaurant-items .infos-card .icon-save .icon-save__disabled {
   display: flex;
   font-size: 22px;
   position: absolute;
@@ -708,7 +679,7 @@ body {
   color: white;
   transform: scale(1.5);
 }
-.restaurant .restaurant-items-position .restaurant-items .infos-card .card-icons-save .icon-save-disabled:hover {
+.restaurant .restaurant-items-position .restaurant-items .infos-card .icon-save .icon-save__disabled:hover {
   opacity: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
@@ -716,7 +687,7 @@ body {
   transform: scale(1.5);
   animation: pulse 1s;
 }
-.restaurant .restaurant-items-position .restaurant-items .infos-card .card-icons-save .icon-save-disabled:active {
+.restaurant .restaurant-items-position .restaurant-items .infos-card .icon-save .icon-save__disabled:active {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -763,27 +734,31 @@ body {
   }
 }
 
-.footer_part {
+.footer__group {
   width: 100%;
   background-color: #333333;
 }
-.footer_part .positions_items_footer {
+.footer__group .footer__position-items {
   margin: 20px;
 }
-.footer_part .positions_items_footer .footer_logo {
+.footer__group .footer__position-items .footer__logo {
   font-family: Shrikhand;
   font-size: 20px;
   color: white;
 }
-.footer_part .positions_items_footer .icon_footer {
+.footer__group .footer__position-items .footer__text {
   font-size: 15px;
   color: white;
   margin-right: 10px;
-}
-.footer_part .positions_items_footer .footer_text {
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  color: white;
+}
+.footer__group .footer__position-items .footer__text .footer__icon-one {
+  margin-right: 5px;
+  font-size: 14px;
+}
+.footer__group .footer__position-items .footer__text .footer__icon-two {
+  margin-right: 5px;
+  font-size: 14px;
 }
 
 .loader {

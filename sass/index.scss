@@ -15,7 +15,8 @@ body {
     border-bottom: 2px solid #cccccc;
     width: 100%;
     height: 60px;
-    .header-logo {
+    justify-content: center;
+    .header__logo {
         width: 150px;
         height: 30px;
         margin: 0px;
@@ -24,7 +25,6 @@ body {
 .header__position-items {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .search_bar {
     display: flex;
@@ -227,27 +227,30 @@ body {
         }
     }
 }
-.footer_part {
+.footer__group {
     width: 100%;
     background-color: #333333;
-    .positions_items_footer {
+    .footer__position-items {
         margin: 20px;
-        .footer_logo {
+        .footer__logo {
             font-family: Shrikhand;
             font-size: 20px;
             color: white;
         }
-        .icon_footer {
+        .footer__text {
             font-size: 15px;
             color: white;
             margin-right: 10px;
-        }
-        .footer_text {
             font-family: 'Roboto', sans-serif;
-            font-size: 15px;
-            color: white;
+            .footer__icon-one {
+                margin-right: 5px;
+                font-size: 14px;
+            }
+            .footer__icon-two {
+                margin-right: 5px;
+                font-size: 14px;
+            }
         }
-        
     }
     
 }

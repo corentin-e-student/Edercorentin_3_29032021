@@ -1,34 +1,38 @@
 @import "global";
 
-.header-restaurant__position-items {
+.header__restaurant {
     display: flex;
-    justify-content: start;
-    align-items: center;
-    .positions-return-icon {
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 60px;
+}
+.header__position-items {
+    .header__link-home {
         display: flex;
-        flex-grow: 0.4;
+        flex-grow: 0.5;
         margin-left: 20px;
         text-decoration: none;
         color: black;
     }
-    .return-icon {
+    .header__icon-return {
         font-size: 20px;
     }
-}
-.block-image {
-    height: 200px;
-    .restaurant-image {
-        width: 100%;
-        margin: 0;
+    .header__logo {
+        width: 150px;
+        height: 30px;
+        margin: 0px;
     }
-    .restaurant-image-two {
+}
+
+.background__image {
+    height: 200px;
+    .background__image-restaurant {
         width: 100%;
         margin: 0;
         object-fit: cover;
-        object-position: 0px -120px;
     }
 }
-.card-menu {
+.menu__card {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -36,14 +40,14 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background-color: #f2f2f2;
-    .menu__title-restaurant {
+    .menu__header {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-top: 25px;
         margin-right: 25px;
         margin-left: 25px;
-        .style-title-restaurant {
+        .menu__title {
             display: flex;
             flex-grow: 1;
             font-family: Shrikhand;
@@ -53,154 +57,129 @@
         @include icon-save;  
     } 
     
-    .flat-group {
+    .flat-card__group {
         display: flex;
         flex-direction: column;
         margin-left: 20px;
         margin-right: 20px;
-        .title-part {
+        .flat-card__group-title {
             font-family: 'Roboto', sans-serif;
             font-size: 15px;
             border-bottom: 2px solid #99E2D0;
             width: 25px;
             line-height: 35px;
         }
-        .flat-card-position {
-            .flat-card {
-                display: flex;
+        .flat-card__style {
+            background-color: white;
+            font-family: 'Roboto', sans-serif;
+            padding: 0px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border-radius: 0.75rem;
+            display: flex;
+            width: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+            .flat-card__image {
+                display: none;
+            }
+            .flat-card__text {
+                flex: 1;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 overflow: hidden;
-                flex-direction: row;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15px;
-                align-items: center;
-                justify-content: start;
-                background-color: white;
-                box-shadow: 0px 3px 6px 2px #d6d6d6;
-                border: none;
-                border-radius: 15px;
-                margin-top: 15px;
-                padding: 0;
-                width: 100%;
-                height: 70px;
-                cursor: pointer;
-                .flat-image {
-                    display: none;
+                padding:10px;
+                .flat-card__title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin: 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
-                .flat-items-position {
+                .flat-card__description {
+                    font-size: 14px;
                     display: flex;
-                    width: 100%;
-                    .flat {
-                        display: flex;
-                        flex-direction: column;
-                        text-align: start;
-                        margin-right: 10px;
-                        margin-left: 10px;
-                        width: 100%;
-                        justify-content: center;
-                        .title-flat-bold {
-                            font-size: 18px;
-                            font-weight: 700;
-                            margin: 0;
-                            margin-bottom: 5px;
-                            .text-ellipsis {
-                                text-overflow: ellipsis;
-                                white-space: nowrap;
-                                overflow: hidden;
-                                width: 80%;
-                            }
-                        }
-                        .flat-specifications {
-                            display: flex;
-                            flex-direction: row;
-                            width: 100%;
-                            margin: 0;
-                            .text-flat {
-                                display: flex;
-                                font-size: 14px;
-                                flex-grow: 1;
-                                overflow: hidden;
-                                .text-ellipsis {
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    width: 80%;
-                                }
-                            }
-                            .flat-price {
-                                font-weight: 600;
-                                font-size: 15px;
-                            }
-                            
-                        }
-                        
-                    }
-                    .validator {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+            .flat-card__price {
+                font-weight: bold;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-right: 10px;
+                padding-bottom: 10px;
+            }
+            .flat-card__validator {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 0%;
+                background-color: #99E2D0;
+                margin: 0;
+                .flat-card__icon-validator {
+                    font-size: 25px;
+                    color: white;
+                } 
+            }
+            &:hover {
+                
+                @keyframes validator {
+                    from {
                         width: 0%;
-                        background-color: #99E2D0;
-                        margin: 0;
-                        .icon-validator {
-                            font-size: 25px;
-                            color: white;
-                        }
-                        
                     }
-                    &:hover {
-                        
-                        @keyframes validator {
-                            from {
-                                width: 0%;
-                            }
-                            to {
-                                width: 30%;
-                            }
-                        }
-                        .validator {
-                            animation-name: validator;
-                            animation-duration: 2s;
-                            width: 30%;
-                        }
-                        @keyframes icon-rotation {
-                            from {
-                                transform: rotate(0deg);
-                            }
-                            to {
-                                transform: rotate(360deg);
-                            }
-                        }
-                        .icon-validator {
-                            animation-name: icon-rotation;
-                            animation-duration: 2s;
-                        }
+                    to {
+                        width: 30%;
                     }
                 }
-            }   
+                .flat-card__validator {
+                    animation-name: validator;
+                    animation-duration: 2s;
+                    width: 30%;
+                }
+                @keyframes icon-rotation {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+                .flat-card__icon-validator {
+                    animation-name: icon-rotation;
+                    animation-duration: 2s;
+                }
+            }
         }
-        .flat-card-one {
+        
+        .flat-card-one__animation {
             animation-duration: 1s;
             animation-name: surf;
         }
-        .flat-card-two {
+        .flat-card-two__animation {
             animation-duration: 2s;
             animation-name: surf;
         }
-        .flat-card-three {
+        .flat-card-three__animation {
             animation-duration: 3s;
             animation-name: surf;
         }
-        .flat-card-four {
+        .flat-card-four__animation {
             animation-duration: 4s;
             animation-name: surf;
         }
+
     }
     
-    .position-order-button {
+    .foot-page__position-items {
         display: flex;
         justify-content: center;
 
-        .order-button {
+        .foot-page__order-button {
             font-size: 15px;
             color: white;
             background: linear-gradient(to bottom right, #FF79DA 10%, #9356DC 80%);
@@ -223,25 +202,7 @@
     }    
 }
 
-
-
-@media only screen and (min-width: 600px) {
-    .header-restaurant__position-items {
-        .positions-return-icon {
-             flex-grow: 0.4;
-        }
-    }
-}
-
-
-
 @media only screen and (min-width: 1024px) {
-    .header-restaurant__position-items {
-        .positions-return-icon {
-             flex-grow: 0.5;
-        }
-    }
-    
     .card-menu {
         display: flex;
         flex-direction: column;
