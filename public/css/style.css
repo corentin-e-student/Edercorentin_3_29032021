@@ -150,7 +150,11 @@
   width: 25px;
   line-height: 35px;
 }
-.menu__card .flat-card__group .flat-card__style {
+.menu__card .flat-card__group .flat-card__group-responsive {
+  display: flex;
+  flex-direction: column;
+}
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style {
   background-color: white;
   font-family: "Roboto", sans-serif;
   padding: 0px;
@@ -159,21 +163,32 @@
   border-radius: 0.75rem;
   display: flex;
   width: 100%;
+  height: auto;
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__image {
-  display: none;
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive {
+  width: 100%;
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__text {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__image {
+  display: none;
+  object-fit: cover;
+  width: 100%;
+}
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive .flat-card__text {
   flex: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   padding: 10px;
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__text .flat-card__title {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive .flat-card__text .flat-card__title {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
@@ -181,15 +196,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-align: start;
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__text .flat-card__description {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive .flat-card__text .flat-card__description {
   font-size: 14px;
   display: flex;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__price {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive .flat-card__price {
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
@@ -197,7 +213,7 @@
   padding-right: 10px;
   padding-bottom: 10px;
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__validator {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive .flat-card__validator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +221,7 @@
   background-color: #99E2D0;
   margin: 0;
 }
-.menu__card .flat-card__group .flat-card__style .flat-card__validator .flat-card__icon-validator {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive .flat-card__validator .flat-card__icon-validator {
   font-size: 25px;
   color: white;
 }
@@ -217,7 +233,7 @@
     width: 30%;
   }
 }
-.menu__card .flat-card__group .flat-card__style:hover .flat-card__validator {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive:hover .flat-card__validator {
   animation-name: validator;
   animation-duration: 2s;
   width: 30%;
@@ -230,23 +246,23 @@
     transform: rotate(360deg);
   }
 }
-.menu__card .flat-card__group .flat-card__style:hover .flat-card__icon-validator {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive:hover .flat-card__icon-validator {
   animation-name: icon-rotation;
   animation-duration: 2s;
 }
-.menu__card .flat-card__group .flat-card-one__animation {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card-one__animation {
   animation-duration: 1s;
   animation-name: surf;
 }
-.menu__card .flat-card__group .flat-card-two__animation {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card-two__animation {
   animation-duration: 2s;
   animation-name: surf;
 }
-.menu__card .flat-card__group .flat-card-three__animation {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card-three__animation {
   animation-duration: 3s;
   animation-name: surf;
 }
-.menu__card .flat-card__group .flat-card-four__animation {
+.menu__card .flat-card__group .flat-card__group-responsive .flat-card-four__animation {
   animation-duration: 4s;
   animation-name: surf;
 }
@@ -276,143 +292,39 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .card-menu {
+  .flat-card__group {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 40px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    background-color: #f2f2f2;
-  }
-  .card-menu .menu__title-restaurant {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 25px;
-    margin-right: 25px;
-    margin-left: 25px;
-  }
-  .card-menu .menu__title-restaurant .style-title-restaurant {
-    display: flex;
-    flex-grow: 1;
-    font-family: Shrikhand;
-    font-size: 25px;
-    margin: 0;
-  }
-  .card-menu .menu__title-restaurant .icon-save {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  .card-menu .menu__title-restaurant .icon-save .icon-save__active {
-    display: flex;
-    font-size: 22px;
-  }
-  .card-menu .menu__title-restaurant .icon-save .icon-save__disabled {
-    display: flex;
-    font-size: 22px;
-    position: absolute;
-    opacity: 0%;
-    color: white;
-    transform: scale(1.5);
-  }
-  .card-menu .menu__title-restaurant .icon-save .icon-save__disabled:hover {
-    opacity: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: scale(1.5);
-    animation: pulse 1s;
-  }
-  .card-menu .menu__title-restaurant .icon-save .icon-save__disabled:active {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .card-menu .flat-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .card-menu .flat-group .title-part {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    border-bottom: 2px solid #99E2D0;
-    width: 50%;
-    line-height: 70px;
     text-align: center;
+    justify-items: center;
   }
-  .card-menu .flat-group .flat-card-position {
+  .flat-card__group .flat-card__group-title {
+    width: 100% !important;
+  }
+  .flat-card__group .flat-card__group-responsive {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    height: 350px !important;
   }
-  .card-menu .flat-group .flat-card-position .flat-card {
+  .flat-card__group .flat-card__group-responsive .flat-card__style {
+    width: 20% !important;
+    height: auto !important;
+  }
+  .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive {
     display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    width: 20%;
-    height: 100%;
-    transition: 0.3s;
+    flex-direction: column !important;
+    width: 100% !important;
   }
-  .card-menu .flat-group .flat-card-position .flat-card .flat-image {
-    display: block;
-    object-fit: cover;
+  .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__image {
+    display: block !important;
+    object-fit: cover !important;
     width: 100%;
-    height: 300px;
+    flex: 1 !important;
   }
-  .card-menu .flat-group .flat-card-position .flat-card .flat-items-position {
-    display: flex;
-    flex-direction: row;
+  .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive {
+    display: flex !important;
+    flex-direction: row !important;
     width: 100%;
-  }
-  .card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  .card-menu .flat-group .flat-card-position .flat-card .flat-items-position .flat .flat-specifications {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 0;
-  }
-  .card-menu .flat-group .flat-card-position .flat-card:hover {
-    box-shadow: 10px 10px 10px grey, -10px 0px 10px grey;
-    transform: scale(1.005);
-  }
-  @keyframes validator {
-    from {
-      width: 0%;
-    }
-    to {
-      width: 30%;
-    }
-  }
-  .card-menu .flat-group .flat-card-position .flat-card:hover .validator {
-    animation-name: validator;
-    animation-duration: 2s;
-    width: 30%;
-  }
-  @keyframes icon-rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .card-menu .flat-group .flat-card-position .flat-card:hover .icon-validator {
-    animation-name: icon-rotation;
-    animation-duration: 2s;
   }
 }
 @keyframes pulse {
@@ -839,8 +751,8 @@ body {
   .guide .guide__position-items .guide__items-step {
     display: flex;
     flex-direction: row;
-    width: 90%;
-    justify-content: space-between;
+    width: 85%;
+    justify-content: space-around;
     margin-top: 50px;
   }
   .guide .guide__position-items .guide__items-step .guide__step .guide__bubble-step {
@@ -885,10 +797,7 @@ body {
 }
 @media only screen and (min-width: 1600px) {
   .guide .guide__position-items .guide__items-step {
-    width: 60%;
-  }
-  .guide .guide__position-items .guide__items-step .guide__step .guide__card-step {
-    font-size: 18px;
+    width: 85%;
   }
 }
 

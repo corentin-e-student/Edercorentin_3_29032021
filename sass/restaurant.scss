@@ -69,111 +69,130 @@
             width: 25px;
             line-height: 35px;
         }
-        .flat-card__style {
-            background-color: white;
-            font-family: 'Roboto', sans-serif;
-            padding: 0px;
-            margin: 0 auto;
-            margin-top: 10px;
-            border-radius: 0.75rem;
+        .flat-card__group-responsive {
             display: flex;
-            width: 100%;
-            cursor: pointer;
-            overflow: hidden;
-            box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
-            .flat-card__image {
-                display: none;
-            }
-            .flat-card__text {
-                flex: 1;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+            flex-direction: column;
+            .flat-card__style {
+                background-color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 0px;
+                margin: 0 auto;
+                margin-top: 10px;
+                border-radius: 0.75rem;
+                display: flex;
+                width: 100%;
+                height: auto;
+                cursor: pointer;
                 overflow: hidden;
-                padding:10px;
-                .flat-card__title {
-                    font-size: 18px;
-                    font-weight: 700;
-                    margin: 0;
-                    margin-bottom: 5px;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
+                box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+                .flat-card__image-responsive {
+                    width: 100%;
+                    .flat-card__image {
+                        display: none;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                    .flat-card__items-responsive {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        .flat-card__text {
+                            flex: 1;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding:10px;
+                            .flat-card__title {
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin: 0;
+                                margin-bottom: 5px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-align: start;
+                            }
+                            .flat-card__description {
+                                font-size: 14px;
+                                display: flex;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                        }
+                        .flat-card__price {
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            padding-right: 10px;
+                            padding-bottom: 10px;
+                        }
+                        .flat-card__validator {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 0%;
+                            background-color: #99E2D0;
+                            margin: 0;
+                            .flat-card__icon-validator {
+                                font-size: 25px;
+                                color: white;
+                            } 
+                        }
+                    }
+                    &:hover {
+                            
+                        @keyframes validator {
+                            from {
+                                width: 0%;
+                            }
+                            to {
+                                width: 30%;
+                            }
+                        }
+                        .flat-card__validator {
+                            animation-name: validator;
+                            animation-duration: 2s;
+                            width: 30%;
+                        }
+                        @keyframes icon-rotation {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        .flat-card__icon-validator {
+                            animation-name: icon-rotation;
+                            animation-duration: 2s;
+                        }
+                    }
+                    
                 }
-                .flat-card__description {
-                    font-size: 14px;
-                    display: flex;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                }
-            }
-            .flat-card__price {
-                font-weight: bold;
-                display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
-                padding-right: 10px;
-                padding-bottom: 10px;
-            }
-            .flat-card__validator {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 0%;
-                background-color: #99E2D0;
-                margin: 0;
-                .flat-card__icon-validator {
-                    font-size: 25px;
-                    color: white;
-                } 
-            }
-            &:hover {
                 
-                @keyframes validator {
-                    from {
-                        width: 0%;
-                    }
-                    to {
-                        width: 30%;
-                    }
-                }
-                .flat-card__validator {
-                    animation-name: validator;
-                    animation-duration: 2s;
-                    width: 30%;
-                }
-                @keyframes icon-rotation {
-                    from {
-                        transform: rotate(0deg);
-                    }
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-                .flat-card__icon-validator {
-                    animation-name: icon-rotation;
-                    animation-duration: 2s;
-                }
             }
+           
+            .flat-card-one__animation {
+                animation-duration: 1s;
+                animation-name: surf;
+            }
+            .flat-card-two__animation {
+                animation-duration: 2s;
+                animation-name: surf;
+            }
+            .flat-card-three__animation {
+                animation-duration: 3s;
+                animation-name: surf;
+            }
+            .flat-card-four__animation {
+                animation-duration: 4s;
+                animation-name: surf;
+            }
+            
         }
-        
-        .flat-card-one__animation {
-            animation-duration: 1s;
-            animation-name: surf;
-        }
-        .flat-card-two__animation {
-            animation-duration: 2s;
-            animation-name: surf;
-        }
-        .flat-card-three__animation {
-            animation-duration: 3s;
-            animation-name: surf;
-        }
-        .flat-card-four__animation {
-            animation-duration: 4s;
-            animation-name: surf;
-        }
-
+    
     }
     
     .foot-page__position-items {
@@ -204,117 +223,43 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .card-menu {
+    .flat-card__group {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-bottom: 40px;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        background-color: #f2f2f2;
-        .menu__title-restaurant {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-top: 25px;
-            margin-right: 25px;
-            margin-left: 25px;
-            .style-title-restaurant {
-                display: flex;
-                flex-grow: 1;
-                font-family: Shrikhand;
-                font-size: 25px;
-                margin: 0;
-            }
-            @include icon-save;  
-        } 
-        .flat-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .title-part {
-                font-family: 'Roboto', sans-serif;
-                font-size: 20px;
-                border-bottom: 2px solid #99E2D0;
-                width: 50%;
-                line-height: 70px;
-                text-align: center;
-            }
-            .flat-card-position {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                justify-content: space-around;
-                margin-top: 20px;
-                margin-bottom: 10px;
-                .flat-card {
-                    display: flex;
-                    overflow: hidden;
-                    flex-direction: column;
-                    width: 20%;
-                    height: 100%;
-                    transition: 0.3s;
-                    .flat-image {
-                        display: block;
-                        object-fit: cover;
-                        width: 100%;
-                        height: 300px;
-                    }
-                    .flat-items-position {
-                        display: flex;
-                        flex-direction: row;
-                        width: 100%;
-                        .flat {
-                            display: flex;
-                            flex-direction: column;
-                            text-align: start;
-                            margin-top: 15px;
-                            margin-bottom: 15px;
-                            width: 100%;
-                            .flat-specifications {
-                                display: flex;
-                                flex-direction: row;
-                                width: 100%;
-                                margin: 0;
-                                
-                            }
-                            
-                        }
-                    }
-                    &:hover {
-                        
-                        @keyframes validator {
-                            from {
-                                width: 0%;
-                            }
-                            to {
-                                width: 30%;
-                            }
-                        }
-                        .validator {
-                            animation-name: validator;
-                            animation-duration: 2s;
-                            width: 30%;
-                        }
-                        @keyframes icon-rotation {
-                            from {
-                                transform: rotate(0deg);
-                            }
-                            to {
-                                transform: rotate(360deg);
-                            }
-                        }
-                        .icon-validator {
-                            animation-name: icon-rotation;
-                            animation-duration: 2s;
-                        }
-                        box-shadow: 10px 10px 10px grey, -10px 0px 10px  grey ;
-                        transform: scale(1.005);
-    
-                    }  
-                }
-            }
+        text-align: center;
+        justify-items: center;
+        .flat-card__group-title {
+            width: 100%!important;
         }
+        .flat-card__group-responsive {
+            display: flex;
+            flex-direction: row!important;
+            justify-content: space-around!important;
+            height: 350px!important;
+            .flat-card__style {
+                width: 20%!important;
+                height: auto!important;
+                .flat-card__image-responsive {
+                    display: flex;
+                    flex-direction: column!important;
+                    width: 100%!important;
+                    .flat-card__image {
+                        display: block!important;
+                        object-fit: cover!important;
+                        width: 100%;
+                        flex:1!important;
+                    }
+                    .flat-card__items-responsive {
+                        display: flex!important;
+                        flex-direction: row!important;
+                        width: 100%;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    
     }
 }
     
