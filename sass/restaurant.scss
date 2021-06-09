@@ -229,6 +229,7 @@
         justify-items: center;
         .flat-card__group-title {
             width: 100%!important;
+            font-size: 20px!important;
         }
         .flat-card__group-responsive {
             display: flex;
@@ -246,7 +247,7 @@
                         display: block!important;
                         object-fit: cover!important;
                         width: 100%;
-                        height: 80%!important;
+                        height: 85%!important;
                     }
                     .flat-card__items-responsive {
                         display: flex!important;
