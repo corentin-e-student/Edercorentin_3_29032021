@@ -692,9 +692,6 @@ body {
   animation-delay: 3s;
 }
 .loader .loader__active {
-  animation-name: loader-disable;
-  animation-delay: 3.2s;
-  animation-duration: 1s;
   opacity: 100%;
 }
 .loader .loader__active .loader__font-style {

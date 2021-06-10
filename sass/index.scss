@@ -270,9 +270,6 @@ body {
     animation: loader-page 2s forwards;
     animation-delay: 3s;
     .loader__active {
-        animation-name: loader-disable;
-        animation-delay: 3.2s;
-        animation-duration: 1s;
         opacity: 100%;
         .loader__font-style {
             display: flex;
