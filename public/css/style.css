@@ -773,14 +773,14 @@ body {
     padding-right: 15px;
   }
 
-  .restaurant .restaurant__items-position {
+  .restaurant .restaurant__position-items {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
   }
-  .restaurant .restaurant__items-position .restaurant__items {
+  .restaurant .restaurant__position-items .restaurant__items {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -789,10 +789,10 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .restaurant .restaurant__items-position .restaurant__items .restaurant__card {
+  .restaurant .restaurant__position-items .restaurant__items .restaurant__card {
     width: 20%;
   }
-  .restaurant .restaurant__items-position .restaurant__items .restaurant__image {
+  .restaurant .restaurant__position-items .restaurant__items .restaurant__image {
     display: flex;
     object-fit: cover;
     width: 100%;
