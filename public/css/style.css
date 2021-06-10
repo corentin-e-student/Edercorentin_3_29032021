@@ -320,7 +320,7 @@
     display: block !important;
     object-fit: cover !important;
     width: 100%;
-    height: 80% !important;
+    height: 85% !important;
   }
   .flat-card__group .flat-card__group-responsive .flat-card__style .flat-card__image-responsive .flat-card__items-responsive {
     display: flex !important;
@@ -395,13 +395,13 @@ body {
   line-height: 26px;
 }
 
-.small-text__light {
+.text__small-light {
   font-size: 17px;
   margin: 0;
   margin-bottom: 10px;
 }
 
-.title-black__bold {
+.title__bold-black {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -469,6 +469,7 @@ body {
   margin-top: 20px;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
 }
 .explorer__style .explorer__button:hover {
   transition-duration: 1s;
@@ -539,11 +540,11 @@ body {
 .restaurant {
   width: 100%;
 }
-.restaurant .restaurant__items-position .restaurant__items {
+.restaurant .restaurant__position-items .restaurant__items {
   margin-right: 20px;
   margin-left: 20px;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__card {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -557,7 +558,7 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__image {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__image {
   display: flex;
   object-fit: cover;
   height: 70%;
@@ -565,27 +566,27 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__card:hover {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__card:hover {
   box-shadow: 10px 10px 10px grey, -10px 0px 10px grey;
   transform: scale(1.005);
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 15px;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .icon-save {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .icon-save {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .icon-save .icon-save__active {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .icon-save .icon-save__active {
   display: flex;
   font-size: 22px;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .icon-save .icon-save__disabled {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .icon-save .icon-save__disabled {
   display: flex;
   font-size: 22px;
   position: absolute;
@@ -593,7 +594,7 @@ body {
   color: white;
   transform: scale(1.5);
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .icon-save .icon-save__disabled:hover {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .icon-save .icon-save__disabled:hover {
   opacity: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
@@ -601,40 +602,40 @@ body {
   transform: scale(1.5);
   animation: pulse 1s;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .icon-save .icon-save__disabled:active {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .icon-save .icon-save__disabled:active {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .restaurant__group-notation {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .restaurant__group-notation {
   display: flex;
   flex-direction: column;
   line-height: 23px;
   flex-grow: 1;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .restaurant__group-notation .restaurant__card-title {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .restaurant__group-notation .restaurant__card-title {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__infos-card .restaurant__group-notation .restaurant__card-notation {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__infos-card .restaurant__group-notation .restaurant__card-notation {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__card-one {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__card-one {
   animation-duration: 1s;
   animation-name: restaurant;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__card-two {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__card-two {
   animation-duration: 1.5s;
   animation-name: restaurant;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__card-three {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__card-three {
   animation-duration: 2s;
   animation-name: restaurant;
 }
-.restaurant .restaurant__items-position .restaurant__items .restaurant__card-four {
+.restaurant .restaurant__position-items .restaurant__items .restaurant__card-four {
   animation-duration: 2.5s;
   animation-name: restaurant;
 }
